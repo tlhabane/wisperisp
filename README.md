@@ -13,7 +13,7 @@ This repository contains my complete full-stack solution for the Wisper ISP code
 
 ---
 
-## 🚀 Features
+## ✨ Features
 
 - ✅ Upload and parse `customer_data.csv`
 - ✅ Filter customers by **state**, **city**, and **status**
@@ -22,6 +22,12 @@ This repository contains my complete full-stack solution for the Wisper ISP code
 - ✅ Paginated, responsive UI (10 records/page)
 - ✅ Integrated React frontend and PHP backend
 - ❌ (Bonus not claimed): Vue 3 frontend
+
+---
+
+## 🚀 Demo
+
+[`https://dev.kreativware.co.za/`](https://dev.kreativware.co.za/)
 
 ---
 

@@ -2,7 +2,7 @@
 
 This backend handles all customer data operations for the Wisper ISP assignment.
 
-## 📌 Features
+## ✨ Features
 
 - POST endpoint to upload `customer_data.csv`
 - Filters for `state`, `city`, and `status`
@@ -12,13 +12,6 @@ This backend handles all customer data operations for the Wisper ISP assignment.
 - OOP architecture with reusable request handler
 - No frameworks – pure PHP
 
----
-
-## 🚀 Demo
-
-[`https://dev.kreativware.co.za/`](https://dev.kreativware.co.za/)
-
----
 
 ## ⚙ Getting Started
 
