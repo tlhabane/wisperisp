@@ -1,0 +1,1566 @@
+{
+	"info": {
+		"_postman_id": "fb216c29-202b-4183-9536-b7ca33a8717b",
+		"name": "Wisper ISP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6396278"
+	},
+	"item": [
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "Load Initial Customer Data",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file[]",
+									"type": "file",
+									"src": "/C:/Users/TlhabaneMonareng/Downloads/customer_data(in).csv"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/wisperisp/backend/customer/load",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"wisperisp",
+								"backend",
+								"customer",
+								"load"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "[Error] Unsupportted files",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file[]",
+											"type": "file",
+											"src": [
+												"/C:/Users/TlhabaneMonareng/Downloads/customer_data(in).csv",
+												"/C:/Users/TlhabaneMonareng/Downloads/Tus Competitor Audit_vv.docx"
+											]
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost/wisperisp/backend/customer/load",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"wisperisp",
+										"backend",
+										"customer",
+										"load"
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 19 Jul 2025 01:56:50 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/8.2.0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Length",
+									"value": "60"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Only csv (*.csv) files are supported\",\n    \"fields\": []\n}"
+						},
+						{
+							"name": "[Error] Data validation",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file[]",
+											"type": "file",
+											"src": "/C:/Users/TlhabaneMonareng/Downloads/customer_data(in).csv"
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost/wisperisp/backend/customer/load",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"wisperisp",
+										"backend",
+										"customer",
+										"load"
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 19 Jul 2025 02:00:17 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/8.2.0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Length",
+									"value": "196"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Data validation error\",\n    \"fields\": {\n        \"phone\": \"Phone number provided (862-287-1718) is already registered\",\n        \"email\": \"Email address provided (Roger_Flack96@1kmd3.space) is already registered\"\n    }\n}"
+						},
+						{
+							"name": "[SUCESS] Customers uploaded",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file[]",
+											"type": "file",
+											"src": "/C:/Users/TlhabaneMonareng/Downloads/customer_data(in).csv"
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost/wisperisp/backend/customer/load",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"wisperisp",
+										"backend",
+										"customer",
+										"load"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 19 Jul 2025 02:01:27 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/8.2.0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Length",
+									"value": "42"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": \"100 customer records created\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Customer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/wisperisp/backend/customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"wisperisp",
+								"backend",
+								"customer"
+							],
+							"query": [
+								{
+									"key": "state",
+									"value": "Illinois",
+									"disabled": true
+								},
+								{
+									"key": "city",
+									"value": "Henderson",
+									"disabled": true
+								},
+								{
+									"key": "id",
+									"value": "100",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "[SUCCESS] All Customers",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost/wisperisp/backend/customer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"wisperisp",
+										"backend",
+										"customer"
+									],
+									"query": [
+										{
+											"key": "state",
+											"value": "Illinois",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 19 Jul 2025 02:41:26 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/8.2.0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"records\": [\n        {\n            \"id\": 1,\n            \"status\": \"Active\",\n            \"firstName\": \"Roger\",\n            \"lastName\": \"Flack\",\n            \"phone\": \"(862) 287-1718\",\n            \"email\": \"Roger_Flack96@1kmd3.space\",\n            \"addressLine1\": \"159 Beaconsfield Grove\",\n            \"addressLine2\": \"\",\n            \"city\": \"Norfolk\",\n            \"state\": \"South Dakota\",\n            \"zip\": \"60647\"\n        },\n        {\n            \"id\": 2,\n            \"status\": \"Inactive\",\n            \"firstName\": \"Andie\",\n            \"lastName\": \"Dann\",\n            \"phone\": \"(567) 165-0376\",\n            \"email\": \"Andie_Dann1452@fhuux.us\",\n            \"addressLine1\": \"1583 Blandford Grove\",\n            \"addressLine2\": \"\",\n            \"city\": \"Pittsburgh\",\n            \"state\": \"North Dakota\",\n            \"zip\": \"60804\"\n        },\n        {\n            \"id\": 3,\n            \"status\": \"Cancelled\",\n            \"firstName\": \"Matt\",\n            \"lastName\": \"Yarlett\",\n            \"phone\": \"(437) 855-1523\",\n            \"email\": \"Matt_Yarlett6948@nmz0p.website\",\n            \"addressLine1\": \"2021 Maple Road\",\n            \"addressLine2\": \"\",\n            \"city\": \"Henderson\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60617\"\n        },\n        {\n            \"id\": 4,\n            \"status\": \"Active\",\n            \"firstName\": \"Michelle\",\n            \"lastName\": \"Young\",\n            \"phone\": \"(533) 402-0306\",\n            \"email\": \"Michelle_Young2884@ptr6k.store\",\n            \"addressLine1\": \"960 Sheffield Lane\",\n            \"addressLine2\": \"\",\n            \"city\": \"Omaha\",\n            \"state\": \"Texas\",\n            \"zip\": \"60647\"\n        },\n        {\n            \"id\": 5,\n            \"status\": \"Inactive\",\n            \"firstName\": \"Kimberly\",\n            \"lastName\": \"Forester\",\n            \"phone\": \"(757) 013-5406\",\n            \"email\": \"Kimberly_Forester3629@3wbkp.space\",\n            \"addressLine1\": \"3702 Bazely Walk\",\n            \"addressLine2\": \"\",\n            \"city\": \"Escondido\",\n            \"state\": \"Colorado\",\n            \"zip\": \"60804\"\n        },\n        {\n            \"id\": 6,\n            \"status\": \"Cancelled\",\n            \"firstName\": \"Kurt\",\n            \"lastName\": \"Brown\",\n            \"phone\": \"(651) 700-5244\",\n            \"email\": \"Kurt_Brown2360@gnjps.host\",\n            \"addressLine1\": \"5240 Walnut Road\",\n            \"addressLine2\": \"\",\n            \"city\": \"Innsbruck\",\n            \"state\": \"Montana\",\n            \"zip\": \"60617\"\n        },\n        {\n            \"id\": 7,\n            \"status\": \"Active\",\n            \"firstName\": \"Paige\",\n            \"lastName\": \"Uddin\",\n            \"phone\": \"(260) 238-0568\",\n            \"email\": \"Paige_Uddin7362@ohqqh.property\",\n            \"addressLine1\": \"6654 Bloomsbury Street\",\n            \"addressLine2\": \"\",\n            \"city\": \"Paris\",\n            \"state\": \"New York\",\n            \"zip\": \"60634\"\n        },\n        {\n            \"id\": 8,\n            \"status\": \"Inactive\",\n            \"firstName\": \"Rachael\",\n            \"lastName\": \"Simpson\",\n            \"phone\": \"(511) 781-2368\",\n            \"email\": \"Rachael_Simpson9046@v1wn5.info\",\n            \"addressLine1\": \"1288 Virginia Street\",\n            \"addressLine2\": \"\",\n            \"city\": \"Berna\",\n            \"state\": \"Delaware\",\n            \"zip\": \"60608\"\n        },\n        {\n            \"id\": 9,\n            \"status\": \"Cancelled\",\n            \"firstName\": \"Lindsay\",\n            \"lastName\": \"Rogan\",\n            \"phone\": \"(715) 276-1628\",\n            \"email\": \"Lindsay_Rogan6000@yahoo.auction\",\n            \"addressLine1\": \"890 Camelot Crossroad\",\n            \"addressLine2\": \"\",\n            \"city\": \"Orlando\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60123\"\n        },\n        {\n            \"id\": 10,\n            \"status\": \"Active\",\n            \"firstName\": \"Karla\",\n            \"lastName\": \"Radley\",\n            \"phone\": \"(816) 458-0521\",\n            \"email\": \"Karla_Radley3763@cke3u.edu\",\n            \"addressLine1\": \"1302 Berry Avenue\",\n            \"addressLine2\": \"\",\n            \"city\": \"San Francisco\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60625\"\n        },\n        {\n            \"id\": 11,\n            \"status\": \"Inactive\",\n            \"firstName\": \"Lexi\",\n            \"lastName\": \"Kirby\",\n            \"phone\": \"(368) 273-6178\",\n            \"email\": \"Lexi_Kirby1398@ckzyi.audio\",\n            \"addressLine1\": \"3859 Empress Walk\",\n            \"addressLine2\": \"\",\n            \"city\": \"Lakewood\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60647\"\n        },\n        {\n            \"id\": 12,\n            \"status\": \"Cancelled\",\n            \"firstName\": \"Carl\",\n            \"lastName\": \"Richards\",\n            \"phone\": \"(683) 801-7142\",\n            \"email\": \"Carl_Richards9052@1kmd3.info\",\n            \"addressLine1\": \"2877 Clissold Drive\",\n            \"addressLine2\": \"\",\n            \"city\": \"Phoenix\",\n            \"state\": \"Minnesota\",\n            \"zip\": \"60804\"\n        },\n        {\n            \"id\": 13,\n            \"status\": \"Active\",\n            \"firstName\": \"Benny\",\n            \"lastName\": \"Mackenzie\",\n            \"phone\": \"(361) 078-0357\",\n            \"email\": \"Benny_Mackenzie8085@1wa8o.info\",\n            \"addressLine1\": \"8899 Durweston Lane\",\n            \"addressLine2\": \"\",\n            \"city\": \"Lyon\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60617\"\n        },\n        {\n            \"id\": 14,\n            \"status\": \"Inactive\",\n            \"firstName\": \"Camellia\",\n            \"lastName\": \"Jordan\",\n            \"phone\": \"(357) 614-6601\",\n            \"email\": \"Camellia_Jordan2083@cke3u.tech\",\n            \"addressLine1\": \"4445 Calvin Avenue\",\n            \"addressLine2\": \"\",\n            \"city\": \"Prague\",\n            \"state\": \"Ohio\",\n            \"zip\": \"60645\"\n        },\n        {\n            \"id\": 15,\n            \"status\": \"Cancelled\",\n            \"firstName\": \"Mackenzie\",\n            \"lastName\": \"Lane\",\n            \"phone\": \"(528) 840-2053\",\n            \"email\": \"Mackenzie_Lane5573@kyb7t.business\",\n            \"addressLine1\": \"6493 Collingwood Lane\",\n            \"addressLine2\": \"\",\n            \"city\": \"Los Angeles\",\n            \"state\": \"Nebraska\",\n            \"zip\": \"60608\"\n        },\n        {\n            \"id\": 16,\n            \"status\": \"Active\",\n            \"firstName\": \"Zoe\",\n            \"lastName\": \"Asher\",\n            \"phone\": \"(184) 604-7743\",\n            \"email\": \"Zoe_Asher9937@ckzyi.online\",\n            \"addressLine1\": \"6654 Tiptree Street\",\n            \"addressLine2\": \"\",\n            \"city\": \"Paris\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60586\"\n        },\n        {\n            \"id\": 17,\n            \"status\": \"Inactive\",\n            \"firstName\": \"Johnny\",\n            \"lastName\": \"Notman\",\n            \"phone\": \"(232) 032-4273\",\n            \"email\": \"Johnny_Notman5397@yvu30.host\",\n            \"addressLine1\": \"3294 Dyott Walk\",\n            \"addressLine2\": \"\",\n            \"city\": \"Detroit\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60625\"\n        },\n        {\n            \"id\": 18,\n            \"status\": \"Cancelled\",\n            \"firstName\": \"Ethan\",\n            \"lastName\": \"Cunningham\",\n            \"phone\": \"(258) 434-7323\",\n            \"email\": \"Ethan_Cunningham3786@fhuux.com\",\n            \"addressLine1\": \"154 Blake Route\",\n            \"addressLine2\": \"\",\n            \"city\": \"Denver\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60647\"\n        },\n        {\n            \"id\": 19,\n            \"status\": \"Active\",\n            \"firstName\": \"Carl\",\n            \"lastName\": \"Plant\",\n            \"phone\": \"(534) 005-2708\",\n            \"email\": \"Carl_Plant6899@iaart.org\",\n            \"addressLine1\": \"9945 Buttonwood Route\",\n            \"addressLine2\": \"\",\n            \"city\": \"Philadelphia\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60804\"\n        },\n        {\n            \"id\": 20,\n            \"status\": \"Inactive\",\n            \"firstName\": \"Hayden\",\n            \"lastName\": \"Howard\",\n            \"phone\": \"(833) 073-5683\",\n            \"email\": \"Hayden_Howard8615@dbxli.site\",\n            \"addressLine1\": \"3180 Chart Street\",\n            \"addressLine2\": \"\",\n            \"city\": \"Miami\",\n            \"state\": \"Texas\",\n            \"zip\": \"60617\"\n        },\n        {\n            \"id\": 21,\n            \"status\": \"Cancelled\",\n            \"firstName\": \"Enoch\",\n            \"lastName\": \"Sylvester\",\n            \"phone\": \"(137) 547-8368\",\n            \"email\": \"Enoch_Sylvester3950@avn7d.video\",\n            \"addressLine1\": \"420 West Drive\",\n            \"addressLine2\": \"\",\n            \"city\": \"Rochester\",\n            \"state\": \"Michigan\",\n            \"zip\": \"60647\"\n        },\n        {\n            \"id\": 22,\n            \"status\": \"Active\",\n            \"firstName\": \"Nick\",\n            \"lastName\": \"Stuart\",\n            \"phone\": \"(527) 202-6821\",\n            \"email\": \"Nick_Stuart3779@ds59r.media\",\n            \"addressLine1\": \"8948 Lincoln Tunnel\",\n            \"addressLine2\": \"\",\n            \"city\": \"Laredo\",\n            \"state\": \"Kansas\",\n            \"zip\": \"60804\"\n        },\n        {\n            \"id\": 23,\n            \"status\": \"Inactive\",\n            \"firstName\": \"Fred\",\n            \"lastName\": \"Cunningham\",\n            \"phone\": \"(464) 501-0316\",\n            \"email\": \"Fred_Cunningham9620@nanoff.property\",\n            \"addressLine1\": \"8823 Victorian Avenue\",\n            \"addressLine2\": \"\",\n            \"city\": \"Saint Paul\",\n            \"state\": \"West Virginia\",\n            \"zip\": \"60617\"\n        },\n        {\n            \"id\": 24,\n            \"status\": \"Active\",\n            \"firstName\": \"Marla\",\n            \"lastName\": \"Glass\",\n            \"phone\": \"(703) 422-6118\",\n            \"email\": \"Marla_Glass4471@nb44i.store\",\n            \"addressLine1\": \"1520 Birkenhead Way\",\n            \"addressLine2\": \"\",\n            \"city\": \"New York\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60435\"\n        },\n        {\n            \"id\": 25,\n            \"status\": \"Active\",\n            \"firstName\": \"Joyce\",\n            \"lastName\": \"Paterson\",\n            \"phone\": \"(151) 027-3720\",\n            \"email\": \"Joyce_Paterson1795@ds59r.website\",\n            \"addressLine1\": \"3697 Howard Rue\",\n            \"addressLine2\": \"\",\n            \"city\": \"Lyon\",\n            \"state\": \"Maine\",\n            \"zip\": \"60608\"\n        },\n        {\n            \"id\": 26,\n            \"status\": \"Inactive\",\n            \"firstName\": \"Nick\",\n            \"lastName\": \"Lomax\",\n            \"phone\": \"(258) 176-7811\",\n            \"email\": \"Nick_Lomax7028@cke3u.biz\",\n            \"addressLine1\": \"7209 Besson Vale\",\n            \"addressLine2\": \"\",\n            \"city\": \"Madison\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60126\"\n        },\n        {\n            \"id\": 27,\n            \"status\": \"Cancelled\",\n            \"firstName\": \"Marvin\",\n            \"lastName\": \"Grady\",\n            \"phone\": \"(257) 678-7256\",\n            \"email\": \"Marvin_Grady9603@ckzyi.audio\",\n            \"addressLine1\": \"1768 Sherwood Vale\",\n            \"addressLine2\": \"\",\n            \"city\": \"Paris\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60625\"\n        },\n        {\n            \"id\": 28,\n            \"status\": \"Active\",\n            \"firstName\": \"Willow\",\n            \"lastName\": \"Grey\",\n            \"phone\": \"(687) 252-4052\",\n            \"email\": \"Willow_Grey6856@dvqq2.digital\",\n            \"addressLine1\": \"2693 Eaglet Grove\",\n            \"addressLine2\": \"\",\n            \"city\": \"Fayetteville\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60617\"\n        },\n        {\n            \"id\": 29,\n            \"status\": \"Inactive\",\n            \"firstName\": \"Ellen\",\n            \"lastName\": \"Campbell\",\n            \"phone\": \"(872) 186-5318\",\n            \"email\": \"Ellen_Campbell4526@dbxli.software\",\n            \"addressLine1\": \"1142 Magnolia Tunnel\",\n            \"addressLine2\": \"\",\n            \"city\": \"Sacramento\",\n            \"state\": \"Michigan\",\n            \"zip\": \"60647\"\n        },\n        {\n            \"id\": 30,\n            \"status\": \"Cancelled\",\n            \"firstName\": \"Daron\",\n            \"lastName\": \"Spencer\",\n            \"phone\": \"(665) 540-4236\",\n            \"email\": \"Daron_Spencer5612@cke3u.press\",\n            \"addressLine1\": \"2917 Thrale Grove\",\n            \"addressLine2\": \"\",\n            \"city\": \"Hayward\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60617\"\n        },\n        {\n            \"id\": 31,\n            \"status\": \"Active\",\n            \"firstName\": \"Christine\",\n            \"lastName\": \"Heaton\",\n            \"phone\": \"(400) 220-3688\",\n            \"email\": \"Christine_Heaton6295@lyvnc.ca\",\n            \"addressLine1\": \"4311 Ashley Hill\",\n            \"addressLine2\": \"\",\n            \"city\": \"Memphis\",\n            \"state\": \"Ohio\",\n            \"zip\": \"60608\"\n        },\n        {\n            \"id\": 32,\n            \"status\": \"Inactive\",\n            \"firstName\": \"Daria\",\n            \"lastName\": \"Brock\",\n            \"phone\": \"(306) 006-1553\",\n            \"email\": \"Daria_Brock9763@ptr6k.services\",\n            \"addressLine1\": \"4879 Westbourne Vale\",\n            \"addressLine2\": \"\",\n            \"city\": \"London\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60625\"\n        },\n        {\n            \"id\": 33,\n            \"status\": \"Cancelled\",\n            \"firstName\": \"Maggie\",\n            \"lastName\": \"Denton\",\n            \"phone\": \"(325) 406-3062\",\n            \"email\": \"Maggie_Denton227@y96lx.ca\",\n            \"addressLine1\": \"8097 Maple Lane\",\n            \"addressLine2\": \"\",\n            \"city\": \"Amarillo\",\n            \"state\": \"Delaware\",\n            \"zip\": \"60647\"\n        },\n        {\n            \"id\": 34,\n            \"status\": \"Active\",\n            \"firstName\": \"Peter\",\n            \"lastName\": \"Bell\",\n            \"phone\": \"(151) 002-5338\",\n            \"email\": \"Peter_Bell1052@p5emz.page\",\n            \"addressLine1\": \"3593 Ensign Alley\",\n            \"addressLine2\": \"\",\n            \"city\": \"Venice\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60804\"\n        },\n        {\n            \"id\": 35,\n            \"status\": \"Inactive\",\n            \"firstName\": \"Deborah\",\n            \"lastName\": \"Butler\",\n            \"phone\": \"(731) 518-8847\",\n            \"email\": \"Deborah_Butler8654@xtwt3.online\",\n            \"addressLine1\": \"2909 Apsley Rue\",\n            \"addressLine2\": \"\",\n            \"city\": \"Scottsdale\",\n            \"state\": \"New York\",\n            \"zip\": \"60644\"\n        },\n        {\n            \"id\": 36,\n            \"status\": \"Cancelled\",\n            \"firstName\": \"Grace\",\n            \"lastName\": \"Logan\",\n            \"phone\": \"(200) 060-5231\",\n            \"email\": \"Grace_Logan2888@uagvw.software\",\n            \"addressLine1\": \"7398 Capeners Walk\",\n            \"addressLine2\": \"\",\n            \"city\": \"Norfolk\",\n            \"state\": \"Rhode Island\",\n            \"zip\": \"60608\"\n        },\n        {\n            \"id\": 37,\n            \"status\": \"Active\",\n            \"firstName\": \"Camila\",\n            \"lastName\": \"Kennedy\",\n            \"phone\": \"(146) 601-7767\",\n            \"email\": \"Camila_Kennedy1370@fhuux.website\",\n            \"addressLine1\": \"631 Chester Avenue\",\n            \"addressLine2\": \"\",\n            \"city\": \"Springfield\",\n            \"state\": \"Minnesota\",\n            \"zip\": \"60625\"\n        },\n        {\n            \"id\": 38,\n            \"status\": \"Inactive\",\n            \"firstName\": \"Joseph\",\n            \"lastName\": \"Adams\",\n            \"phone\": \"(457) 483-3380\",\n            \"email\": \"Joseph_Adams7282@d9un8.info\",\n            \"addressLine1\": \"998 Norfolk Rue\",\n            \"addressLine2\": \"\",\n            \"city\": \"Garland\",\n            \"state\": \"Delaware\",\n            \"zip\": \"60647\"\n        },\n        {\n            \"id\": 39,\n            \"status\": \"Cancelled\",\n            \"firstName\": \"Tom\",\n            \"lastName\": \"Fowler\",\n            \"phone\": \"(475) 171-4752\",\n            \"email\": \"Tom_Fowler1715@chkzl.store\",\n            \"addressLine1\": \"8523 Heritage Street\",\n            \"addressLine2\": \"\",\n            \"city\": \"Glendale\",\n            \"state\": \"Ohio\",\n            \"zip\": \"60617\"\n        },\n        {\n            \"id\": 40,\n            \"status\": \"Active\",\n            \"firstName\": \"William\",\n            \"lastName\": \"Upton\",\n            \"phone\": \"(163) 632-1875\",\n            \"email\": \"William_Upton7703@jh02o.net\",\n            \"addressLine1\": \"3095 Champion Pass\",\n            \"addressLine2\": \"\",\n            \"city\": \"Berna\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60608\"\n        },\n        {\n            \"id\": 41,\n            \"status\": \"Inactive\",\n            \"firstName\": \"Allison\",\n            \"lastName\": \"Roth\",\n            \"phone\": \"(148) 406-4307\",\n            \"email\": \"Allison_Roth4370@yafr7.host\",\n            \"addressLine1\": \"8309 Wager Drive\",\n            \"addressLine2\": \"\",\n            \"city\": \"Otawa\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60634\"\n        },\n        {\n            \"id\": 42,\n            \"status\": \"Active\",\n            \"firstName\": \"Carmella\",\n            \"lastName\": \"Ulyatt\",\n            \"phone\": \"(858) 121-6105\",\n            \"email\": \"Carmella_Ulyatt5985@p5emz.page\",\n            \"addressLine1\": \"5708 King Boulevard\",\n            \"addressLine2\": \"\",\n            \"city\": \"Indianapolis\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60623\"\n        },\n        {\n            \"id\": 43,\n            \"status\": \"Active\",\n            \"firstName\": \"Davina\",\n            \"lastName\": \"Ross\",\n            \"phone\": \"(274) 282-8078\",\n            \"email\": \"Davina_Ross439@d9un8.store\",\n            \"addressLine1\": \"5135 Bocking Lane\",\n            \"addressLine2\": \"\",\n            \"city\": \"Dallas\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60085\"\n        },\n        {\n            \"id\": 44,\n            \"status\": \"Inactive\",\n            \"firstName\": \"Bree\",\n            \"lastName\": \"Murray\",\n            \"phone\": \"(800) 743-7278\",\n            \"email\": \"Bree_Murray8696@p5emz.center\",\n            \"addressLine1\": \"6635 Bendall Walk\",\n            \"addressLine2\": \"\",\n            \"city\": \"Bellevue\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60014\"\n        },\n        {\n            \"id\": 45,\n            \"status\": \"Cancelled\",\n            \"firstName\": \"Michaela\",\n            \"lastName\": \"Hopkinson\",\n            \"phone\": \"(670) 187-8627\",\n            \"email\": \"Michaela_Hopkinson3145@mpibr.property\",\n            \"addressLine1\": \"4103 Caedmon Lane\",\n            \"addressLine2\": \"\",\n            \"city\": \"Chicago\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60647\"\n        },\n        {\n            \"id\": 46,\n            \"status\": \"Active\",\n            \"firstName\": \"Abdul\",\n            \"lastName\": \"Seymour\",\n            \"phone\": \"(283) 466-3868\",\n            \"email\": \"Abdul_Seymour195@ptr6k.org\",\n            \"addressLine1\": \"9335 Byland Rue\",\n            \"addressLine2\": \"\",\n            \"city\": \"Madison\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60617\"\n        },\n        {\n            \"id\": 47,\n            \"status\": \"Inactive\",\n            \"firstName\": \"Hayden\",\n            \"lastName\": \"Warner\",\n            \"phone\": \"(357) 476-3348\",\n            \"email\": \"Hayden_Warner4866@ds59r.business\",\n            \"addressLine1\": \"763 Walnut Walk\",\n            \"addressLine2\": \"\",\n            \"city\": \"Valetta\",\n            \"state\": \"Oregon\",\n            \"zip\": \"60608\"\n        },\n        {\n            \"id\": 48,\n            \"status\": \"Cancelled\",\n            \"firstName\": \"Ada\",\n            \"lastName\": \"Pierce\",\n            \"phone\": \"(856) 736-4626\",\n            \"email\": \"Ada_Pierce9868@zynuu.net\",\n            \"addressLine1\": \"1257 Rivervalley Vale\",\n            \"addressLine2\": \"\",\n            \"city\": \"Seattle\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60625\"\n        },\n        {\n            \"id\": 49,\n            \"status\": \"Active\",\n            \"firstName\": \"Isabel\",\n            \"lastName\": \"Carter\",\n            \"phone\": \"(516) 250-7376\",\n            \"email\": \"Isabel_Carter6658@ptr6k.directory\",\n            \"addressLine1\": \"5815 Cardinal Way\",\n            \"addressLine2\": \"\",\n            \"city\": \"Lisbon\",\n            \"state\": \"Nebraska\",\n            \"zip\": \"60647\"\n        },\n        {\n            \"id\": 50,\n            \"status\": \"Inactive\",\n            \"firstName\": \"Jolene\",\n            \"lastName\": \"Townend\",\n            \"phone\": \"(200) 783-8813\",\n            \"email\": \"Jolene_Townend4723@1wa8o.zone\",\n            \"addressLine1\": \"1092 Canon Road\",\n            \"addressLine2\": \"\",\n            \"city\": \"Saint Paul\",\n            \"state\": \"Tennessee\",\n            \"zip\": \"60804\"\n        },\n        {\n            \"id\": 51,\n            \"status\": \"Cancelled\",\n            \"firstName\": \"Daron\",\n            \"lastName\": \"Dempsey\",\n            \"phone\": \"(864) 868-5467\",\n            \"email\": \"Daron_Dempsey3573@qu9ml.us\",\n            \"addressLine1\": \"7336 East Road\",\n            \"addressLine2\": \"\",\n            \"city\": \"Omaha\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60010\"\n        },\n        {\n            \"id\": 52,\n            \"status\": \"Active\",\n            \"firstName\": \"Anne\",\n            \"lastName\": \"Evans\",\n            \"phone\": \"(887) 458-6131\",\n            \"email\": \"Anne_Evans161@voylg.digital\",\n            \"addressLine1\": \"6759 Andsell Vale\",\n            \"addressLine2\": \"\",\n            \"city\": \"Long Beach\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60608\"\n        },\n        {\n            \"id\": 53,\n            \"status\": \"Inactive\",\n            \"firstName\": \"Noah\",\n            \"lastName\": \"Cooper\",\n            \"phone\": \"(611) 462-8705\",\n            \"email\": \"Noah_Cooper9626@bqkv0.works\",\n            \"addressLine1\": \"2053 Calverley Tunnel\",\n            \"addressLine2\": \"\",\n            \"city\": \"Honolulu\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60625\"\n        },\n        {\n            \"id\": 54,\n            \"status\": \"Cancelled\",\n            \"firstName\": \"Sasha\",\n            \"lastName\": \"Vangness\",\n            \"phone\": \"(648) 200-1215\",\n            \"email\": \"Sasha_Vangness5140@dvqq2.site\",\n            \"addressLine1\": \"4896 Besson Crossroad\",\n            \"addressLine2\": \"\",\n            \"city\": \"Wien\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60647\"\n        },\n        {\n            \"id\": 55,\n            \"status\": \"Active\",\n            \"firstName\": \"Celina\",\n            \"lastName\": \"Herbert\",\n            \"phone\": \"(581) 458-4053\",\n            \"email\": \"Celina_Herbert1595@iscmr.tech\",\n            \"addressLine1\": \"5582 Ben Rue\",\n            \"addressLine2\": \"\",\n            \"city\": \"Henderson\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60617\"\n        },\n        {\n            \"id\": 56,\n            \"status\": \"Inactive\",\n            \"firstName\": \"Roger\",\n            \"lastName\": \"Lunt\",\n            \"phone\": \"(283) 535-5542\",\n            \"email\": \"Roger_Lunt1228@xqj6f.info\",\n            \"addressLine1\": \"9587 Antrobus Rue\",\n            \"addressLine2\": \"\",\n            \"city\": \"Rome\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60608\"\n        },\n        {\n            \"id\": 57,\n            \"status\": \"Cancelled\",\n            \"firstName\": \"Johnny\",\n            \"lastName\": \"Swift\",\n            \"phone\": \"(652) 566-2864\",\n            \"email\": \"Johnny_Swift87@yafr7.name\",\n            \"addressLine1\": \"649 Abourne Road\",\n            \"addressLine2\": \"\",\n            \"city\": \"Laredo\",\n            \"state\": \"Louisiana\",\n            \"zip\": \"60647\"\n        },\n        {\n            \"id\": 58,\n            \"status\": \"Active\",\n            \"firstName\": \"Manuel\",\n            \"lastName\": \"Bryant\",\n            \"phone\": \"(472) 181-5888\",\n            \"email\": \"Manuel_Bryant6520@c2nyu.center\",\n            \"addressLine1\": \"5156 Longmoore Crossroad\",\n            \"addressLine2\": \"\",\n            \"city\": \"San Francisco\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60617\"\n        },\n        {\n            \"id\": 59,\n            \"status\": \"Inactive\",\n            \"firstName\": \"Hayden\",\n            \"lastName\": \"Irving\",\n            \"phone\": \"(354) 105-2414\",\n            \"email\": \"Hayden_Irving2864@kyb7t.name\",\n            \"addressLine1\": \"5252 Mariner Hill\",\n            \"addressLine2\": \"\",\n            \"city\": \"San Francisco\",\n            \"state\": \"Missouri\",\n            \"zip\": \"60608\"\n        },\n        {\n            \"id\": 60,\n            \"status\": \"Active\",\n            \"firstName\": \"Brad\",\n            \"lastName\": \"Donnelly\",\n            \"phone\": \"(884) 848-1678\",\n            \"email\": \"Brad_Donnelly536@jh02o.info\",\n            \"addressLine1\": \"9561 Gautrey Walk\",\n            \"addressLine2\": \"\",\n            \"city\": \"Paris\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60625\"\n        },\n        {\n            \"id\": 61,\n            \"status\": \"Active\",\n            \"firstName\": \"Erin\",\n            \"lastName\": \"Middleton\",\n            \"phone\": \"(768) 745-8262\",\n            \"email\": \"Erin_Middleton9879@urn0m.store\",\n            \"addressLine1\": \"9642 Heritage Tunnel\",\n            \"addressLine2\": \"\",\n            \"city\": \"Scottsdale\",\n            \"state\": \"New York\",\n            \"zip\": \"60647\"\n        },\n        {\n            \"id\": 62,\n            \"status\": \"Inactive\",\n            \"firstName\": \"Kenzie\",\n            \"lastName\": \"Rose\",\n            \"phone\": \"(433) 586-6304\",\n            \"email\": \"Kenzie_Rose7135@yahoo.shop\",\n            \"addressLine1\": \"4806 Bethwin Road\",\n            \"addressLine2\": \"\",\n            \"city\": \"Las Vegas\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60804\"\n        },\n        {\n            \"id\": 63,\n            \"status\": \"Cancelled\",\n            \"firstName\": \"Noah\",\n            \"lastName\": \"Bradley\",\n            \"phone\": \"(160) 886-4304\",\n            \"email\": \"Noah_Bradley4144@nb44i.auction\",\n            \"addressLine1\": \"3113 Fairbairn Vale\",\n            \"addressLine2\": \"\",\n            \"city\": \"Bridgeport\",\n            \"state\": \"Massachusetts\",\n            \"zip\": \"60564\"\n        },\n        {\n            \"id\": 64,\n            \"status\": \"Active\",\n            \"firstName\": \"Liv\",\n            \"lastName\": \"Oliver\",\n            \"phone\": \"(232) 887-7458\",\n            \"email\": \"Liv_Oliver6647@xqj6f.space\",\n            \"addressLine1\": \"4914 Calshot Vale\",\n            \"addressLine2\": \"\",\n            \"city\": \"Moreno Valley\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60608\"\n        },\n        {\n            \"id\": 65,\n            \"status\": \"Inactive\",\n            \"firstName\": \"William\",\n            \"lastName\": \"Parker\",\n            \"phone\": \"(514) 305-0540\",\n            \"email\": \"William_Parker3080@iscmr.host\",\n            \"addressLine1\": \"5369 Cavell Street\",\n            \"addressLine2\": \"\",\n            \"city\": \"Dallas\",\n            \"state\": \"Tennessee\",\n            \"zip\": \"60625\"\n        },\n        {\n            \"id\": 66,\n            \"status\": \"Cancelled\",\n            \"firstName\": \"Rosalyn\",\n            \"lastName\": \"Daniells\",\n            \"phone\": \"(403) 418-8425\",\n            \"email\": \"Rosalyn_Daniells9773@jh02o.business\",\n            \"addressLine1\": \"9476 Church Street\",\n            \"addressLine2\": \"\",\n            \"city\": \"Fremont\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60647\"\n        },\n        {\n            \"id\": 67,\n            \"status\": \"Active\",\n            \"firstName\": \"Judith\",\n            \"lastName\": \"Mcgee\",\n            \"phone\": \"(738) 625-4608\",\n            \"email\": \"Judith_Mcgee4613@avn7d.design\",\n            \"addressLine1\": \"9223 Baltic Lane\",\n            \"addressLine2\": \"\",\n            \"city\": \"Irving\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60617\"\n        },\n        {\n            \"id\": 68,\n            \"status\": \"Inactive\",\n            \"firstName\": \"Angel\",\n            \"lastName\": \"Pearce\",\n            \"phone\": \"(734) 451-4384\",\n            \"email\": \"Angel_Pearce3936@nb44i.works\",\n            \"addressLine1\": \"3854 English Way\",\n            \"addressLine2\": \"\",\n            \"city\": \"Fremont\",\n            \"state\": \"Wyoming\",\n            \"zip\": \"60608\"\n        },\n        {\n            \"id\": 69,\n            \"status\": \"Cancelled\",\n            \"firstName\": \"Harry\",\n            \"lastName\": \"Williams\",\n            \"phone\": \"(250) 403-3670\",\n            \"email\": \"Harry_Williams3818@jcf8v.store\",\n            \"addressLine1\": \"2907 Vincent Hill\",\n            \"addressLine2\": \"\",\n            \"city\": \"Richmond\",\n            \"state\": \"Colorado\",\n            \"zip\": \"60004\"\n        },\n        {\n            \"id\": 70,\n            \"status\": \"Active\",\n            \"firstName\": \"Penny\",\n            \"lastName\": \"Rosenbloom\",\n            \"phone\": \"(857) 705-1877\",\n            \"email\": \"Penny_Rosenbloom7199@iaart.catering\",\n            \"addressLine1\": \"4961 Monroe Grove\",\n            \"addressLine2\": \"\",\n            \"city\": \"Chicago\",\n            \"state\": \"South Dakota\",\n            \"zip\": \"60647\"\n        },\n        {\n            \"id\": 71,\n            \"status\": \"Inactive\",\n            \"firstName\": \"Hannah\",\n            \"lastName\": \"Pearce\",\n            \"phone\": \"(223) 684-4747\",\n            \"email\": \"Hannah_Pearce2479@xtwt3.press\",\n            \"addressLine1\": \"442 Monroe Road\",\n            \"addressLine2\": \"\",\n            \"city\": \"Salem\",\n            \"state\": \"Colorado\",\n            \"zip\": \"60617\"\n        },\n        {\n            \"id\": 72,\n            \"status\": \"Cancelled\",\n            \"firstName\": \"Marvin\",\n            \"lastName\": \"Woodley\",\n            \"phone\": \"(573) 326-8228\",\n            \"email\": \"Marvin_Woodley8228@urn0m.design\",\n            \"addressLine1\": \"9045 Cleveland Vale\",\n            \"addressLine2\": \"\",\n            \"city\": \"Worcester\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60608\"\n        },\n        {\n            \"id\": 73,\n            \"status\": \"Active\",\n            \"firstName\": \"Mary\",\n            \"lastName\": \"Collis\",\n            \"phone\": \"(815) 836-5786\",\n            \"email\": \"Mary_Collis6789@nanoff.pro\",\n            \"addressLine1\": \"4776 Gautrey Vale\",\n            \"addressLine2\": \"\",\n            \"city\": \"Seattle\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60625\"\n        },\n        {\n            \"id\": 74,\n            \"status\": \"Inactive\",\n            \"firstName\": \"Matthew\",\n            \"lastName\": \"Vass\",\n            \"phone\": \"(153) 217-0667\",\n            \"email\": \"Matthew_Vass7758@nmz0p.press\",\n            \"addressLine1\": \"5023 Chesterfield Route\",\n            \"addressLine2\": \"\",\n            \"city\": \"Huntsville\",\n            \"state\": \"Washington\",\n            \"zip\": \"60647\"\n        },\n        {\n            \"id\": 75,\n            \"status\": \"Cancelled\",\n            \"firstName\": \"Tom\",\n            \"lastName\": \"Morgan\",\n            \"phone\": \"(527) 830-0060\",\n            \"email\": \"Tom_Morgan4068@jh02o.org\",\n            \"addressLine1\": \"4932 Bocking Rue\",\n            \"addressLine2\": \"\",\n            \"city\": \"Miami\",\n            \"state\": \"Wyoming\",\n            \"zip\": \"60804\"\n        },\n        {\n            \"id\": 76,\n            \"status\": \"Active\",\n            \"firstName\": \"Brooklyn\",\n            \"lastName\": \"Shelton\",\n            \"phone\": \"(234) 325-3817\",\n            \"email\": \"Brooklyn_Shelton5860@bqkv0.info\",\n            \"addressLine1\": \"5106 Bennett Pass\",\n            \"addressLine2\": \"\",\n            \"city\": \"Laredo\",\n            \"state\": \"New York\",\n            \"zip\": \"60440\"\n        },\n        {\n            \"id\": 77,\n            \"status\": \"Inactive\",\n            \"firstName\": \"Lauren\",\n            \"lastName\": \"Mccormick\",\n            \"phone\": \"(772) 551-6776\",\n            \"email\": \"Lauren_Mccormick3123@cke3u.website\",\n            \"addressLine1\": \"7727 Caroline Tunnel\",\n            \"addressLine2\": \"\",\n            \"city\": \"Orlando\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60608\"\n        },\n        {\n            \"id\": 78,\n            \"status\": \"Cancelled\",\n            \"firstName\": \"Marla\",\n            \"lastName\": \"Ingham\",\n            \"phone\": \"(487) 702-2865\",\n            \"email\": \"Marla_Ingham7036@iaart.services\",\n            \"addressLine1\": \"1578 Carolina Way\",\n            \"addressLine2\": \"\",\n            \"city\": \"Colorado Springs\",\n            \"state\": \"Tennessee\",\n            \"zip\": \"60625\"\n        },\n        {\n            \"id\": 79,\n            \"status\": \"Active\",\n            \"firstName\": \"Julian\",\n            \"lastName\": \"Knight\",\n            \"phone\": \"(235) 217-6506\",\n            \"email\": \"Julian_Knight292@avn7d.digital\",\n            \"addressLine1\": \"5619 Chambers Drive\",\n            \"addressLine2\": \"\",\n            \"city\": \"Stockton\",\n            \"state\": \"South Dakota\",\n            \"zip\": \"60647\"\n        },\n        {\n            \"id\": 80,\n            \"status\": \"Inactive\",\n            \"firstName\": \"Marvin\",\n            \"lastName\": \"Morris\",\n            \"phone\": \"(583) 385-6087\",\n            \"email\": \"Marvin_Morris6771@yfxpw.zone\",\n            \"addressLine1\": \"3858 Union Avenue\",\n            \"addressLine2\": \"\",\n            \"city\": \"Phoenix\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60617\"\n        },\n        {\n            \"id\": 81,\n            \"status\": \"Cancelled\",\n            \"firstName\": \"Gil\",\n            \"lastName\": \"Lomax\",\n            \"phone\": \"(217) 165-5027\",\n            \"email\": \"Gil_Lomax9867@yfxpw.website\",\n            \"addressLine1\": \"8566 Balham Way\",\n            \"addressLine2\": \"\",\n            \"city\": \"Louisville\",\n            \"state\": \"North Dakota\",\n            \"zip\": \"60608\"\n        },\n        {\n            \"id\": 82,\n            \"status\": \"Active\",\n            \"firstName\": \"Jayden\",\n            \"lastName\": \"Redwood\",\n            \"phone\": \"(280) 083-7535\",\n            \"email\": \"Jayden_Redwood327@y96lx.property\",\n            \"addressLine1\": \"1326 Rise Walk\",\n            \"addressLine2\": \"\",\n            \"city\": \"Rome\",\n            \"state\": \"Rhode Island\",\n            \"zip\": \"60804\"\n        },\n        {\n            \"id\": 83,\n            \"status\": \"Inactive\",\n            \"firstName\": \"Domenic\",\n            \"lastName\": \"Tobin\",\n            \"phone\": \"(580) 012-6235\",\n            \"email\": \"Domenic_Tobin5724@d9un8.us\",\n            \"addressLine1\": \"9044 Lexington Vale\",\n            \"addressLine2\": \"\",\n            \"city\": \"Bucharest\",\n            \"state\": \"Tennessee\",\n            \"zip\": \"60617\"\n        },\n        {\n            \"id\": 84,\n            \"status\": \"Cancelled\",\n            \"firstName\": \"Helen\",\n            \"lastName\": \"Donnelly\",\n            \"phone\": \"(140) 833-8077\",\n            \"email\": \"Helen_Donnelly7022@lhp4j.mobi\",\n            \"addressLine1\": \"4539 Bayberry Tunnel\",\n            \"addressLine2\": \"\",\n            \"city\": \"Orlando\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60123\"\n        },\n        {\n            \"id\": 85,\n            \"status\": \"Active\",\n            \"firstName\": \"Barney\",\n            \"lastName\": \"Kelly\",\n            \"phone\": \"(348) 020-4011\",\n            \"email\": \"Barney_Kelly1923@xtwt3.shop\",\n            \"addressLine1\": \"3014 Geffrye Grove\",\n            \"addressLine2\": \"\",\n            \"city\": \"Las Vegas\",\n            \"state\": \"Rhode Island\",\n            \"zip\": \"60608\"\n        },\n        {\n            \"id\": 86,\n            \"status\": \"Inactive\",\n            \"firstName\": \"Ethan\",\n            \"lastName\": \"Thornton\",\n            \"phone\": \"(728) 428-5304\",\n            \"email\": \"Ethan_Thornton5454@cdpfn.site\",\n            \"addressLine1\": \"5661 Dutton Pass\",\n            \"addressLine2\": \"\",\n            \"city\": \"Oakland\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60506\"\n        },\n        {\n            \"id\": 87,\n            \"status\": \"Cancelled\",\n            \"firstName\": \"Eileen\",\n            \"lastName\": \"West\",\n            \"phone\": \"(256) 887-0721\",\n            \"email\": \"Eileen_West2168@cke3u.net\",\n            \"addressLine1\": \"9476 Byland Rue\",\n            \"addressLine2\": \"\",\n            \"city\": \"Scottsdale\",\n            \"state\": \"West Virginia\",\n            \"zip\": \"60625\"\n        },\n        {\n            \"id\": 88,\n            \"status\": \"Active\",\n            \"firstName\": \"Jack\",\n            \"lastName\": \"Warner\",\n            \"phone\": \"(504) 206-7058\",\n            \"email\": \"Jack_Warner8984@zynuu.audio\",\n            \"addressLine1\": \"6444 Cadogan Alley\",\n            \"addressLine2\": \"\",\n            \"city\": \"Henderson\",\n            \"state\": \"Tennessee\",\n            \"zip\": \"60637\"\n        },\n        {\n            \"id\": 89,\n            \"status\": \"Inactive\",\n            \"firstName\": \"Nicole\",\n            \"lastName\": \"Hall\",\n            \"phone\": \"(336) 868-2220\",\n            \"email\": \"Nicole_Hall1401@ohqqh.business\",\n            \"addressLine1\": \"1493 Durnford Road\",\n            \"addressLine2\": \"\",\n            \"city\": \"Otawa\",\n            \"state\": \"Massachusetts\",\n            \"zip\": \"60647\"\n        },\n        {\n            \"id\": 90,\n            \"status\": \"Cancelled\",\n            \"firstName\": \"Cassandra\",\n            \"lastName\": \"Mooney\",\n            \"phone\": \"(556) 383-2333\",\n            \"email\": \"Cassandra_Mooney5542@bqkv0.store\",\n            \"addressLine1\": \"2080 Kingly Pass\",\n            \"addressLine2\": \"\",\n            \"city\": \"El Paso\",\n            \"state\": \"New Jersey\",\n            \"zip\": \"60617\"\n        },\n        {\n            \"id\": 91,\n            \"status\": \"Active\",\n            \"firstName\": \"Peter\",\n            \"lastName\": \"Collingwood\",\n            \"phone\": \"(745) 570-5426\",\n            \"email\": \"Peter_Collingwood2119@ohqqh.property\",\n            \"addressLine1\": \"1089 Bellenden Lane\",\n            \"addressLine2\": \"\",\n            \"city\": \"Lincoln\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60608\"\n        },\n        {\n            \"id\": 92,\n            \"status\": \"Inactive\",\n            \"firstName\": \"Boris\",\n            \"lastName\": \"Pearson\",\n            \"phone\": \"(317) 835-8657\",\n            \"email\": \"Boris_Pearson7281@nb44i.press\",\n            \"addressLine1\": \"5770 Carol Pass\",\n            \"addressLine2\": \"\",\n            \"city\": \"Louisville\",\n            \"state\": \"Oregon\",\n            \"zip\": \"60625\"\n        },\n        {\n            \"id\": 93,\n            \"status\": \"Active\",\n            \"firstName\": \"Ryan\",\n            \"lastName\": \"Stewart\",\n            \"phone\": \"(444) 260-7863\",\n            \"email\": \"Ryan_Stewart2887@dbxli.tech\",\n            \"addressLine1\": \"2982 Liverpool Route\",\n            \"addressLine2\": \"\",\n            \"city\": \"Springfield\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60647\"\n        },\n        {\n            \"id\": 94,\n            \"status\": \"Active\",\n            \"firstName\": \"Erick\",\n            \"lastName\": \"Hale\",\n            \"phone\": \"(672) 080-2513\",\n            \"email\": \"Erick_Hale8444@lhp4j.app\",\n            \"addressLine1\": \"489 Canon Boulevard\",\n            \"addressLine2\": \"\",\n            \"city\": \"Saint Paul\",\n            \"state\": \"South Dakota\",\n            \"zip\": \"60804\"\n        },\n        {\n            \"id\": 95,\n            \"status\": \"Inactive\",\n            \"firstName\": \"Joseph\",\n            \"lastName\": \"Saunders\",\n            \"phone\": \"(730) 264-1038\",\n            \"email\": \"Joseph_Saunders58@voylg.catering\",\n            \"addressLine1\": \"5204 Linda Rue\",\n            \"addressLine2\": \"\",\n            \"city\": \"Moreno Valley\",\n            \"state\": \"Tennessee\",\n            \"zip\": \"60123\"\n        },\n        {\n            \"id\": 96,\n            \"status\": \"Cancelled\",\n            \"firstName\": \"Helen\",\n            \"lastName\": \"Jenkins\",\n            \"phone\": \"(708) 671-0517\",\n            \"email\": \"Helen_Jenkins3718@yafr7.net\",\n            \"addressLine1\": \"6716 Bellenden Crossroad\",\n            \"addressLine2\": \"\",\n            \"city\": \"Washington\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60608\"\n        },\n        {\n            \"id\": 97,\n            \"status\": \"Active\",\n            \"firstName\": \"Marilyn\",\n            \"lastName\": \"Whitehouse\",\n            \"phone\": \"(873) 507-5450\",\n            \"email\": \"Marilyn_Whitehouse9127@yvu30.club\",\n            \"addressLine1\": \"1778 Chamberlain Rue\",\n            \"addressLine2\": \"\",\n            \"city\": \"Louisville\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60625\"\n        },\n        {\n            \"id\": 98,\n            \"status\": \"Inactive\",\n            \"firstName\": \"Anthony\",\n            \"lastName\": \"Overson\",\n            \"phone\": \"(360) 317-4312\",\n            \"email\": \"Anthony_Overson9113@yfxpw.space\",\n            \"addressLine1\": \"8278 Central Hill\",\n            \"addressLine2\": \"\",\n            \"city\": \"Richmond\",\n            \"state\": \"Kansas\",\n            \"zip\": \"60647\"\n        },\n        {\n            \"id\": 99,\n            \"status\": \"Cancelled\",\n            \"firstName\": \"Joseph\",\n            \"lastName\": \"Emmott\",\n            \"phone\": \"(733) 583-6547\",\n            \"email\": \"Joseph_Emmott3281@v1wn5.design\",\n            \"addressLine1\": \"8359 Birkenhead Street\",\n            \"addressLine2\": \"\",\n            \"city\": \"Miami\",\n            \"state\": \"Delaware\",\n            \"zip\": \"60617\"\n        },\n        {\n            \"id\": 100,\n            \"status\": \"Active\",\n            \"firstName\": \"Rosalyn\",\n            \"lastName\": \"Lynn\",\n            \"phone\": \"(126) 036-2501\",\n            \"email\": \"Rosalyn_Lynn5739@jcf8v.store\",\n            \"addressLine1\": \"3587 Lane Hill\",\n            \"addressLine2\": \"\",\n            \"city\": \"Escondido\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60608\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "[SUCCESS] Customers filters by State",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost/wisperisp/backend/customer?state=Illinois",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"wisperisp",
+										"backend",
+										"customer"
+									],
+									"query": [
+										{
+											"key": "state",
+											"value": "Illinois"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 19 Jul 2025 02:42:28 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/8.2.0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"records\": [\n        {\n            \"id\": 3,\n            \"status\": \"Cancelled\",\n            \"firstName\": \"Matt\",\n            \"lastName\": \"Yarlett\",\n            \"phone\": \"(437) 855-1523\",\n            \"email\": \"Matt_Yarlett6948@nmz0p.website\",\n            \"addressLine1\": \"2021 Maple Road\",\n            \"addressLine2\": \"\",\n            \"city\": \"Henderson\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60617\"\n        },\n        {\n            \"id\": 9,\n            \"status\": \"Cancelled\",\n            \"firstName\": \"Lindsay\",\n            \"lastName\": \"Rogan\",\n            \"phone\": \"(715) 276-1628\",\n            \"email\": \"Lindsay_Rogan6000@yahoo.auction\",\n            \"addressLine1\": \"890 Camelot Crossroad\",\n            \"addressLine2\": \"\",\n            \"city\": \"Orlando\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60123\"\n        },\n        {\n            \"id\": 10,\n            \"status\": \"Active\",\n            \"firstName\": \"Karla\",\n            \"lastName\": \"Radley\",\n            \"phone\": \"(816) 458-0521\",\n            \"email\": \"Karla_Radley3763@cke3u.edu\",\n            \"addressLine1\": \"1302 Berry Avenue\",\n            \"addressLine2\": \"\",\n            \"city\": \"San Francisco\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60625\"\n        },\n        {\n            \"id\": 11,\n            \"status\": \"Inactive\",\n            \"firstName\": \"Lexi\",\n            \"lastName\": \"Kirby\",\n            \"phone\": \"(368) 273-6178\",\n            \"email\": \"Lexi_Kirby1398@ckzyi.audio\",\n            \"addressLine1\": \"3859 Empress Walk\",\n            \"addressLine2\": \"\",\n            \"city\": \"Lakewood\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60647\"\n        },\n        {\n            \"id\": 13,\n            \"status\": \"Active\",\n            \"firstName\": \"Benny\",\n            \"lastName\": \"Mackenzie\",\n            \"phone\": \"(361) 078-0357\",\n            \"email\": \"Benny_Mackenzie8085@1wa8o.info\",\n            \"addressLine1\": \"8899 Durweston Lane\",\n            \"addressLine2\": \"\",\n            \"city\": \"Lyon\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60617\"\n        },\n        {\n            \"id\": 16,\n            \"status\": \"Active\",\n            \"firstName\": \"Zoe\",\n            \"lastName\": \"Asher\",\n            \"phone\": \"(184) 604-7743\",\n            \"email\": \"Zoe_Asher9937@ckzyi.online\",\n            \"addressLine1\": \"6654 Tiptree Street\",\n            \"addressLine2\": \"\",\n            \"city\": \"Paris\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60586\"\n        },\n        {\n            \"id\": 17,\n            \"status\": \"Inactive\",\n            \"firstName\": \"Johnny\",\n            \"lastName\": \"Notman\",\n            \"phone\": \"(232) 032-4273\",\n            \"email\": \"Johnny_Notman5397@yvu30.host\",\n            \"addressLine1\": \"3294 Dyott Walk\",\n            \"addressLine2\": \"\",\n            \"city\": \"Detroit\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60625\"\n        },\n        {\n            \"id\": 18,\n            \"status\": \"Cancelled\",\n            \"firstName\": \"Ethan\",\n            \"lastName\": \"Cunningham\",\n            \"phone\": \"(258) 434-7323\",\n            \"email\": \"Ethan_Cunningham3786@fhuux.com\",\n            \"addressLine1\": \"154 Blake Route\",\n            \"addressLine2\": \"\",\n            \"city\": \"Denver\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60647\"\n        },\n        {\n            \"id\": 19,\n            \"status\": \"Active\",\n            \"firstName\": \"Carl\",\n            \"lastName\": \"Plant\",\n            \"phone\": \"(534) 005-2708\",\n            \"email\": \"Carl_Plant6899@iaart.org\",\n            \"addressLine1\": \"9945 Buttonwood Route\",\n            \"addressLine2\": \"\",\n            \"city\": \"Philadelphia\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60804\"\n        },\n        {\n            \"id\": 24,\n            \"status\": \"Active\",\n            \"firstName\": \"Marla\",\n            \"lastName\": \"Glass\",\n            \"phone\": \"(703) 422-6118\",\n            \"email\": \"Marla_Glass4471@nb44i.store\",\n            \"addressLine1\": \"1520 Birkenhead Way\",\n            \"addressLine2\": \"\",\n            \"city\": \"New York\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60435\"\n        },\n        {\n            \"id\": 26,\n            \"status\": \"Inactive\",\n            \"firstName\": \"Nick\",\n            \"lastName\": \"Lomax\",\n            \"phone\": \"(258) 176-7811\",\n            \"email\": \"Nick_Lomax7028@cke3u.biz\",\n            \"addressLine1\": \"7209 Besson Vale\",\n            \"addressLine2\": \"\",\n            \"city\": \"Madison\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60126\"\n        },\n        {\n            \"id\": 27,\n            \"status\": \"Cancelled\",\n            \"firstName\": \"Marvin\",\n            \"lastName\": \"Grady\",\n            \"phone\": \"(257) 678-7256\",\n            \"email\": \"Marvin_Grady9603@ckzyi.audio\",\n            \"addressLine1\": \"1768 Sherwood Vale\",\n            \"addressLine2\": \"\",\n            \"city\": \"Paris\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60625\"\n        },\n        {\n            \"id\": 28,\n            \"status\": \"Active\",\n            \"firstName\": \"Willow\",\n            \"lastName\": \"Grey\",\n            \"phone\": \"(687) 252-4052\",\n            \"email\": \"Willow_Grey6856@dvqq2.digital\",\n            \"addressLine1\": \"2693 Eaglet Grove\",\n            \"addressLine2\": \"\",\n            \"city\": \"Fayetteville\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60617\"\n        },\n        {\n            \"id\": 30,\n            \"status\": \"Cancelled\",\n            \"firstName\": \"Daron\",\n            \"lastName\": \"Spencer\",\n            \"phone\": \"(665) 540-4236\",\n            \"email\": \"Daron_Spencer5612@cke3u.press\",\n            \"addressLine1\": \"2917 Thrale Grove\",\n            \"addressLine2\": \"\",\n            \"city\": \"Hayward\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60617\"\n        },\n        {\n            \"id\": 32,\n            \"status\": \"Inactive\",\n            \"firstName\": \"Daria\",\n            \"lastName\": \"Brock\",\n            \"phone\": \"(306) 006-1553\",\n            \"email\": \"Daria_Brock9763@ptr6k.services\",\n            \"addressLine1\": \"4879 Westbourne Vale\",\n            \"addressLine2\": \"\",\n            \"city\": \"London\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60625\"\n        },\n        {\n            \"id\": 34,\n            \"status\": \"Active\",\n            \"firstName\": \"Peter\",\n            \"lastName\": \"Bell\",\n            \"phone\": \"(151) 002-5338\",\n            \"email\": \"Peter_Bell1052@p5emz.page\",\n            \"addressLine1\": \"3593 Ensign Alley\",\n            \"addressLine2\": \"\",\n            \"city\": \"Venice\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60804\"\n        },\n        {\n            \"id\": 40,\n            \"status\": \"Active\",\n            \"firstName\": \"William\",\n            \"lastName\": \"Upton\",\n            \"phone\": \"(163) 632-1875\",\n            \"email\": \"William_Upton7703@jh02o.net\",\n            \"addressLine1\": \"3095 Champion Pass\",\n            \"addressLine2\": \"\",\n            \"city\": \"Berna\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60608\"\n        },\n        {\n            \"id\": 41,\n            \"status\": \"Inactive\",\n            \"firstName\": \"Allison\",\n            \"lastName\": \"Roth\",\n            \"phone\": \"(148) 406-4307\",\n            \"email\": \"Allison_Roth4370@yafr7.host\",\n            \"addressLine1\": \"8309 Wager Drive\",\n            \"addressLine2\": \"\",\n            \"city\": \"Otawa\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60634\"\n        },\n        {\n            \"id\": 42,\n            \"status\": \"Active\",\n            \"firstName\": \"Carmella\",\n            \"lastName\": \"Ulyatt\",\n            \"phone\": \"(858) 121-6105\",\n            \"email\": \"Carmella_Ulyatt5985@p5emz.page\",\n            \"addressLine1\": \"5708 King Boulevard\",\n            \"addressLine2\": \"\",\n            \"city\": \"Indianapolis\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60623\"\n        },\n        {\n            \"id\": 43,\n            \"status\": \"Active\",\n            \"firstName\": \"Davina\",\n            \"lastName\": \"Ross\",\n            \"phone\": \"(274) 282-8078\",\n            \"email\": \"Davina_Ross439@d9un8.store\",\n            \"addressLine1\": \"5135 Bocking Lane\",\n            \"addressLine2\": \"\",\n            \"city\": \"Dallas\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60085\"\n        },\n        {\n            \"id\": 44,\n            \"status\": \"Inactive\",\n            \"firstName\": \"Bree\",\n            \"lastName\": \"Murray\",\n            \"phone\": \"(800) 743-7278\",\n            \"email\": \"Bree_Murray8696@p5emz.center\",\n            \"addressLine1\": \"6635 Bendall Walk\",\n            \"addressLine2\": \"\",\n            \"city\": \"Bellevue\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60014\"\n        },\n        {\n            \"id\": 45,\n            \"status\": \"Cancelled\",\n            \"firstName\": \"Michaela\",\n            \"lastName\": \"Hopkinson\",\n            \"phone\": \"(670) 187-8627\",\n            \"email\": \"Michaela_Hopkinson3145@mpibr.property\",\n            \"addressLine1\": \"4103 Caedmon Lane\",\n            \"addressLine2\": \"\",\n            \"city\": \"Chicago\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60647\"\n        },\n        {\n            \"id\": 46,\n            \"status\": \"Active\",\n            \"firstName\": \"Abdul\",\n            \"lastName\": \"Seymour\",\n            \"phone\": \"(283) 466-3868\",\n            \"email\": \"Abdul_Seymour195@ptr6k.org\",\n            \"addressLine1\": \"9335 Byland Rue\",\n            \"addressLine2\": \"\",\n            \"city\": \"Madison\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60617\"\n        },\n        {\n            \"id\": 48,\n            \"status\": \"Cancelled\",\n            \"firstName\": \"Ada\",\n            \"lastName\": \"Pierce\",\n            \"phone\": \"(856) 736-4626\",\n            \"email\": \"Ada_Pierce9868@zynuu.net\",\n            \"addressLine1\": \"1257 Rivervalley Vale\",\n            \"addressLine2\": \"\",\n            \"city\": \"Seattle\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60625\"\n        },\n        {\n            \"id\": 51,\n            \"status\": \"Cancelled\",\n            \"firstName\": \"Daron\",\n            \"lastName\": \"Dempsey\",\n            \"phone\": \"(864) 868-5467\",\n            \"email\": \"Daron_Dempsey3573@qu9ml.us\",\n            \"addressLine1\": \"7336 East Road\",\n            \"addressLine2\": \"\",\n            \"city\": \"Omaha\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60010\"\n        },\n        {\n            \"id\": 52,\n            \"status\": \"Active\",\n            \"firstName\": \"Anne\",\n            \"lastName\": \"Evans\",\n            \"phone\": \"(887) 458-6131\",\n            \"email\": \"Anne_Evans161@voylg.digital\",\n            \"addressLine1\": \"6759 Andsell Vale\",\n            \"addressLine2\": \"\",\n            \"city\": \"Long Beach\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60608\"\n        },\n        {\n            \"id\": 53,\n            \"status\": \"Inactive\",\n            \"firstName\": \"Noah\",\n            \"lastName\": \"Cooper\",\n            \"phone\": \"(611) 462-8705\",\n            \"email\": \"Noah_Cooper9626@bqkv0.works\",\n            \"addressLine1\": \"2053 Calverley Tunnel\",\n            \"addressLine2\": \"\",\n            \"city\": \"Honolulu\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60625\"\n        },\n        {\n            \"id\": 54,\n            \"status\": \"Cancelled\",\n            \"firstName\": \"Sasha\",\n            \"lastName\": \"Vangness\",\n            \"phone\": \"(648) 200-1215\",\n            \"email\": \"Sasha_Vangness5140@dvqq2.site\",\n            \"addressLine1\": \"4896 Besson Crossroad\",\n            \"addressLine2\": \"\",\n            \"city\": \"Wien\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60647\"\n        },\n        {\n            \"id\": 55,\n            \"status\": \"Active\",\n            \"firstName\": \"Celina\",\n            \"lastName\": \"Herbert\",\n            \"phone\": \"(581) 458-4053\",\n            \"email\": \"Celina_Herbert1595@iscmr.tech\",\n            \"addressLine1\": \"5582 Ben Rue\",\n            \"addressLine2\": \"\",\n            \"city\": \"Henderson\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60617\"\n        },\n        {\n            \"id\": 56,\n            \"status\": \"Inactive\",\n            \"firstName\": \"Roger\",\n            \"lastName\": \"Lunt\",\n            \"phone\": \"(283) 535-5542\",\n            \"email\": \"Roger_Lunt1228@xqj6f.info\",\n            \"addressLine1\": \"9587 Antrobus Rue\",\n            \"addressLine2\": \"\",\n            \"city\": \"Rome\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60608\"\n        },\n        {\n            \"id\": 58,\n            \"status\": \"Active\",\n            \"firstName\": \"Manuel\",\n            \"lastName\": \"Bryant\",\n            \"phone\": \"(472) 181-5888\",\n            \"email\": \"Manuel_Bryant6520@c2nyu.center\",\n            \"addressLine1\": \"5156 Longmoore Crossroad\",\n            \"addressLine2\": \"\",\n            \"city\": \"San Francisco\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60617\"\n        },\n        {\n            \"id\": 60,\n            \"status\": \"Active\",\n            \"firstName\": \"Brad\",\n            \"lastName\": \"Donnelly\",\n            \"phone\": \"(884) 848-1678\",\n            \"email\": \"Brad_Donnelly536@jh02o.info\",\n            \"addressLine1\": \"9561 Gautrey Walk\",\n            \"addressLine2\": \"\",\n            \"city\": \"Paris\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60625\"\n        },\n        {\n            \"id\": 62,\n            \"status\": \"Inactive\",\n            \"firstName\": \"Kenzie\",\n            \"lastName\": \"Rose\",\n            \"phone\": \"(433) 586-6304\",\n            \"email\": \"Kenzie_Rose7135@yahoo.shop\",\n            \"addressLine1\": \"4806 Bethwin Road\",\n            \"addressLine2\": \"\",\n            \"city\": \"Las Vegas\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60804\"\n        },\n        {\n            \"id\": 64,\n            \"status\": \"Active\",\n            \"firstName\": \"Liv\",\n            \"lastName\": \"Oliver\",\n            \"phone\": \"(232) 887-7458\",\n            \"email\": \"Liv_Oliver6647@xqj6f.space\",\n            \"addressLine1\": \"4914 Calshot Vale\",\n            \"addressLine2\": \"\",\n            \"city\": \"Moreno Valley\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60608\"\n        },\n        {\n            \"id\": 66,\n            \"status\": \"Cancelled\",\n            \"firstName\": \"Rosalyn\",\n            \"lastName\": \"Daniells\",\n            \"phone\": \"(403) 418-8425\",\n            \"email\": \"Rosalyn_Daniells9773@jh02o.business\",\n            \"addressLine1\": \"9476 Church Street\",\n            \"addressLine2\": \"\",\n            \"city\": \"Fremont\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60647\"\n        },\n        {\n            \"id\": 67,\n            \"status\": \"Active\",\n            \"firstName\": \"Judith\",\n            \"lastName\": \"Mcgee\",\n            \"phone\": \"(738) 625-4608\",\n            \"email\": \"Judith_Mcgee4613@avn7d.design\",\n            \"addressLine1\": \"9223 Baltic Lane\",\n            \"addressLine2\": \"\",\n            \"city\": \"Irving\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60617\"\n        },\n        {\n            \"id\": 72,\n            \"status\": \"Cancelled\",\n            \"firstName\": \"Marvin\",\n            \"lastName\": \"Woodley\",\n            \"phone\": \"(573) 326-8228\",\n            \"email\": \"Marvin_Woodley8228@urn0m.design\",\n            \"addressLine1\": \"9045 Cleveland Vale\",\n            \"addressLine2\": \"\",\n            \"city\": \"Worcester\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60608\"\n        },\n        {\n            \"id\": 73,\n            \"status\": \"Active\",\n            \"firstName\": \"Mary\",\n            \"lastName\": \"Collis\",\n            \"phone\": \"(815) 836-5786\",\n            \"email\": \"Mary_Collis6789@nanoff.pro\",\n            \"addressLine1\": \"4776 Gautrey Vale\",\n            \"addressLine2\": \"\",\n            \"city\": \"Seattle\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60625\"\n        },\n        {\n            \"id\": 77,\n            \"status\": \"Inactive\",\n            \"firstName\": \"Lauren\",\n            \"lastName\": \"Mccormick\",\n            \"phone\": \"(772) 551-6776\",\n            \"email\": \"Lauren_Mccormick3123@cke3u.website\",\n            \"addressLine1\": \"7727 Caroline Tunnel\",\n            \"addressLine2\": \"\",\n            \"city\": \"Orlando\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60608\"\n        },\n        {\n            \"id\": 80,\n            \"status\": \"Inactive\",\n            \"firstName\": \"Marvin\",\n            \"lastName\": \"Morris\",\n            \"phone\": \"(583) 385-6087\",\n            \"email\": \"Marvin_Morris6771@yfxpw.zone\",\n            \"addressLine1\": \"3858 Union Avenue\",\n            \"addressLine2\": \"\",\n            \"city\": \"Phoenix\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60617\"\n        },\n        {\n            \"id\": 84,\n            \"status\": \"Cancelled\",\n            \"firstName\": \"Helen\",\n            \"lastName\": \"Donnelly\",\n            \"phone\": \"(140) 833-8077\",\n            \"email\": \"Helen_Donnelly7022@lhp4j.mobi\",\n            \"addressLine1\": \"4539 Bayberry Tunnel\",\n            \"addressLine2\": \"\",\n            \"city\": \"Orlando\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60123\"\n        },\n        {\n            \"id\": 86,\n            \"status\": \"Inactive\",\n            \"firstName\": \"Ethan\",\n            \"lastName\": \"Thornton\",\n            \"phone\": \"(728) 428-5304\",\n            \"email\": \"Ethan_Thornton5454@cdpfn.site\",\n            \"addressLine1\": \"5661 Dutton Pass\",\n            \"addressLine2\": \"\",\n            \"city\": \"Oakland\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60506\"\n        },\n        {\n            \"id\": 91,\n            \"status\": \"Active\",\n            \"firstName\": \"Peter\",\n            \"lastName\": \"Collingwood\",\n            \"phone\": \"(745) 570-5426\",\n            \"email\": \"Peter_Collingwood2119@ohqqh.property\",\n            \"addressLine1\": \"1089 Bellenden Lane\",\n            \"addressLine2\": \"\",\n            \"city\": \"Lincoln\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60608\"\n        },\n        {\n            \"id\": 93,\n            \"status\": \"Active\",\n            \"firstName\": \"Ryan\",\n            \"lastName\": \"Stewart\",\n            \"phone\": \"(444) 260-7863\",\n            \"email\": \"Ryan_Stewart2887@dbxli.tech\",\n            \"addressLine1\": \"2982 Liverpool Route\",\n            \"addressLine2\": \"\",\n            \"city\": \"Springfield\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60647\"\n        },\n        {\n            \"id\": 96,\n            \"status\": \"Cancelled\",\n            \"firstName\": \"Helen\",\n            \"lastName\": \"Jenkins\",\n            \"phone\": \"(708) 671-0517\",\n            \"email\": \"Helen_Jenkins3718@yafr7.net\",\n            \"addressLine1\": \"6716 Bellenden Crossroad\",\n            \"addressLine2\": \"\",\n            \"city\": \"Washington\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60608\"\n        },\n        {\n            \"id\": 97,\n            \"status\": \"Active\",\n            \"firstName\": \"Marilyn\",\n            \"lastName\": \"Whitehouse\",\n            \"phone\": \"(873) 507-5450\",\n            \"email\": \"Marilyn_Whitehouse9127@yvu30.club\",\n            \"addressLine1\": \"1778 Chamberlain Rue\",\n            \"addressLine2\": \"\",\n            \"city\": \"Louisville\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60625\"\n        },\n        {\n            \"id\": 100,\n            \"status\": \"Active\",\n            \"firstName\": \"Rosalyn\",\n            \"lastName\": \"Lynn\",\n            \"phone\": \"(126) 036-2501\",\n            \"email\": \"Rosalyn_Lynn5739@jcf8v.store\",\n            \"addressLine1\": \"3587 Lane Hill\",\n            \"addressLine2\": \"\",\n            \"city\": \"Escondido\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60608\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "[SUCCESS] Customers filtered by State & City",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost/wisperisp/backend/customer?state=Illinois&city=Orlando",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"wisperisp",
+										"backend",
+										"customer"
+									],
+									"query": [
+										{
+											"key": "state",
+											"value": "Illinois"
+										},
+										{
+											"key": "city",
+											"value": "Orlando"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 19 Jul 2025 02:43:46 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/8.2.0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Length",
+									"value": "752"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"records\": [\n        {\n            \"id\": 9,\n            \"status\": \"Cancelled\",\n            \"firstName\": \"Lindsay\",\n            \"lastName\": \"Rogan\",\n            \"phone\": \"(715) 276-1628\",\n            \"email\": \"Lindsay_Rogan6000@yahoo.auction\",\n            \"addressLine1\": \"890 Camelot Crossroad\",\n            \"addressLine2\": \"\",\n            \"city\": \"Orlando\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60123\"\n        },\n        {\n            \"id\": 77,\n            \"status\": \"Inactive\",\n            \"firstName\": \"Lauren\",\n            \"lastName\": \"Mccormick\",\n            \"phone\": \"(772) 551-6776\",\n            \"email\": \"Lauren_Mccormick3123@cke3u.website\",\n            \"addressLine1\": \"7727 Caroline Tunnel\",\n            \"addressLine2\": \"\",\n            \"city\": \"Orlando\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60608\"\n        },\n        {\n            \"id\": 84,\n            \"status\": \"Cancelled\",\n            \"firstName\": \"Helen\",\n            \"lastName\": \"Donnelly\",\n            \"phone\": \"(140) 833-8077\",\n            \"email\": \"Helen_Donnelly7022@lhp4j.mobi\",\n            \"addressLine1\": \"4539 Bayberry Tunnel\",\n            \"addressLine2\": \"\",\n            \"city\": \"Orlando\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60123\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "[SUCCESS] Customers filter by City",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost/wisperisp/backend/customer?city=Henderson",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"wisperisp",
+										"backend",
+										"customer"
+									],
+									"query": [
+										{
+											"key": "state",
+											"value": "Illinois",
+											"disabled": true
+										},
+										{
+											"key": "city",
+											"value": "Henderson"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 19 Jul 2025 02:45:26 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/8.2.0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Length",
+									"value": "724"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"records\": [\n        {\n            \"id\": 3,\n            \"status\": \"Cancelled\",\n            \"firstName\": \"Matt\",\n            \"lastName\": \"Yarlett\",\n            \"phone\": \"(437) 855-1523\",\n            \"email\": \"Matt_Yarlett6948@nmz0p.website\",\n            \"addressLine1\": \"2021 Maple Road\",\n            \"addressLine2\": \"\",\n            \"city\": \"Henderson\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60617\"\n        },\n        {\n            \"id\": 55,\n            \"status\": \"Active\",\n            \"firstName\": \"Celina\",\n            \"lastName\": \"Herbert\",\n            \"phone\": \"(581) 458-4053\",\n            \"email\": \"Celina_Herbert1595@iscmr.tech\",\n            \"addressLine1\": \"5582 Ben Rue\",\n            \"addressLine2\": \"\",\n            \"city\": \"Henderson\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60617\"\n        },\n        {\n            \"id\": 88,\n            \"status\": \"Active\",\n            \"firstName\": \"Jack\",\n            \"lastName\": \"Warner\",\n            \"phone\": \"(504) 206-7058\",\n            \"email\": \"Jack_Warner8984@zynuu.audio\",\n            \"addressLine1\": \"6444 Cadogan Alley\",\n            \"addressLine2\": \"\",\n            \"city\": \"Henderson\",\n            \"state\": \"Tennessee\",\n            \"zip\": \"60637\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "[SUCCESS] Customers filtered by Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost/wisperisp/backend/customer?id=100",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"wisperisp",
+										"backend",
+										"customer"
+									],
+									"query": [
+										{
+											"key": "state",
+											"value": "Illinois",
+											"disabled": true
+										},
+										{
+											"key": "city",
+											"value": "Henderson",
+											"disabled": true
+										},
+										{
+											"key": "id",
+											"value": "100"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 19 Jul 2025 02:46:31 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/8.2.0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Length",
+									"value": "248"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"records\": [\n        {\n            \"id\": 100,\n            \"status\": \"Active\",\n            \"firstName\": \"Rosalyn\",\n            \"lastName\": \"Lynn\",\n            \"phone\": \"(126) 036-2501\",\n            \"email\": \"Rosalyn_Lynn5739@jcf8v.store\",\n            \"addressLine1\": \"3587 Lane Hill\",\n            \"addressLine2\": \"\",\n            \"city\": \"Escondido\",\n            \"state\": \"Illinois\",\n            \"zip\": \"60608\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Add Customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Tlhabane\",\r\n    \"lastName\": \"Monareng\",\r\n    \"phone\": \"073-0055345\",\r\n    \"email\": \"tmonareng@kreativware.co.za\",\r\n    \"addressLine1\": \"6768 Fregatvoel Street\",\r\n    \"addressLine2\": \"Celtisda X20\",\r\n    \"city\": \"Centurion\",\r\n    \"state\": \"Gauteng\",\r\n    \"zip\": \"0157\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/wisperisp/backend/customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"wisperisp",
+								"backend",
+								"customer"
+							],
+							"query": [
+								{
+									"key": "state",
+									"value": "Illinois",
+									"disabled": true
+								},
+								{
+									"key": "city",
+									"value": "Henderson",
+									"disabled": true
+								},
+								{
+									"key": "id",
+									"value": "100",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "[ERROR] Duplicate data",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Tlhabane\",\r\n    \"lastName\": \"Monanreng\",\r\n    \"phone\": \"862-287-1718\",\r\n    \"email\": \"Roger_Flack96@1kmd3.space\",\r\n    \"addressLine1\": \"6768 Fregatvoel Street\",\r\n    \"addressLine2\": \"Celtisda X20\",\r\n    \"city\": \"Centurion\",\r\n    \"state\": \"Gauteng\",\r\n    \"zip\": \"0157\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost/wisperisp/backend/customer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"wisperisp",
+										"backend",
+										"customer"
+									],
+									"query": [
+										{
+											"key": "state",
+											"value": "Illinois",
+											"disabled": true
+										},
+										{
+											"key": "city",
+											"value": "Henderson",
+											"disabled": true
+										},
+										{
+											"key": "id",
+											"value": "100",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 19 Jul 2025 04:07:09 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/8.2.0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Length",
+									"value": "196"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Data validation error\",\n    \"fields\": {\n        \"phone\": \"Phone number provided (862-287-1718) is already registered\",\n        \"email\": \"Email address provided (Roger_Flack96@1kmd3.space) is already registered\"\n    }\n}"
+						},
+						{
+							"name": "[ERROR] Missing required data",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"\",\r\n    \"lastName\": \"Monareng\",\r\n    \"phone\": \"\",\r\n    \"email\": \"tmonareng@kreativware.co.za\",\r\n    \"addressLine1\": \"6768 Fregatvoel Street\",\r\n    \"addressLine2\": \"Celtisda X20\",\r\n    \"city\": \"Centurion\",\r\n    \"state\": \"Gauteng\",\r\n    \"zip\": \"0157\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost/wisperisp/backend/customer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"wisperisp",
+										"backend",
+										"customer"
+									],
+									"query": [
+										{
+											"key": "state",
+											"value": "Illinois",
+											"disabled": true
+										},
+										{
+											"key": "city",
+											"value": "Henderson",
+											"disabled": true
+										},
+										{
+											"key": "id",
+											"value": "100",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 19 Jul 2025 04:09:15 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/8.2.0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Length",
+									"value": "126"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Data validation error\",\n    \"fields\": {\n        \"firstName\": \"Invalid first name provided\",\n        \"phone\": \"Invalid phone number provided\"\n    }\n}"
+						},
+						{
+							"name": "[SUCCESS] New Customer Added",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Tlhabane\",\r\n    \"lastName\": \"Monareng\",\r\n    \"phone\": \"073-0055345\",\r\n    \"email\": \"tmonareng@kreativware.co.za\",\r\n    \"addressLine1\": \"6768 Fregatvoel Street\",\r\n    \"addressLine2\": \"Celtisda X20\",\r\n    \"city\": \"Centurion\",\r\n    \"state\": \"Gauteng\",\r\n    \"zip\": \"0157\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost/wisperisp/backend/customer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"wisperisp",
+										"backend",
+										"customer"
+									],
+									"query": [
+										{
+											"key": "state",
+											"value": "Illinois",
+											"disabled": true
+										},
+										{
+											"key": "city",
+											"value": "Henderson",
+											"disabled": true
+										},
+										{
+											"key": "id",
+											"value": "100",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 19 Jul 2025 04:15:53 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/8.2.0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": \"New customer added\",\n    \"id\": 102\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Customer",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"101\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/wisperisp/backend/customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"wisperisp",
+								"backend",
+								"customer"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "101",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "[SUCCESS] Delete Customer",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 101\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost/wisperisp/backend/customer?id=101",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"wisperisp",
+										"backend",
+										"customer"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "101"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 19 Jul 2025 04:12:21 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/8.2.0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Length",
+									"value": "39"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": \"Customer deleted\",\n    \"id\": 101\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Customer",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"102\",\r\n    \"firstName\": \"Tlhabane\",\r\n    \"lastName\": \"Monareng\",\r\n    \"phone\": \"0730055345\",\r\n    \"email\": \"dev@kreativware.co.za\",\r\n    \"addressLine1\": \"6768 Fregatvoel Street\",\r\n    \"addressLine2\": \"Celtisda X20\",\r\n    \"city\": \"Centurion\",\r\n    \"state\": \"Gauteng\",\r\n    \"zip\": \"0157\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/wisperisp/backend/customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"wisperisp",
+								"backend",
+								"customer"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "[ERROR] Missing customer Id",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Tlhabane\",\r\n    \"lastName\": \"Monareng\",\r\n    \"phone\": \"0730055345\",\r\n    \"email\": \"dev@kreativware.co.za\",\r\n    \"addressLine1\": \"6768 Fregatvoel Street\",\r\n    \"addressLine2\": \"Celtisda X20\",\r\n    \"city\": \"Centurion\",\r\n    \"state\": \"Gauteng\",\r\n    \"zip\": \"0157\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost/wisperisp/backend/customer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"wisperisp",
+										"backend",
+										"customer"
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 19 Jul 2025 04:28:25 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/8.2.0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Length",
+									"value": "59"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Invalid or missing customer details\",\n    \"fields\": []\n}"
+						},
+						{
+							"name": "[ERROR] Duplicate data",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"102\",\r\n    \"firstName\": \"Tlhabane\",\r\n    \"lastName\": \"Monareng\",\r\n    \"phone\": \"(862) 287-1718\",\r\n    \"email\": \"dev@kreativware.co.za\",\r\n    \"addressLine1\": \"6768 Fregatvoel Street\",\r\n    \"addressLine2\": \"Celtisda X20\",\r\n    \"city\": \"Centurion\",\r\n    \"state\": \"Gauteng\",\r\n    \"zip\": \"0157\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost/wisperisp/backend/customer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"wisperisp",
+										"backend",
+										"customer"
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 19 Jul 2025 04:30:07 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/8.2.0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Length",
+									"value": "115"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"Data validation error\",\n    \"fields\": {\n        \"phone\": \"Phone number provided ((862) 287-1718) is already registered\"\n    }\n}"
+						},
+						{
+							"name": "[SUCCESS] Customer updated",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"102\",\r\n    \"firstName\": \"Tlhabane\",\r\n    \"lastName\": \"Monareng\",\r\n    \"phone\": \"0730055345\",\r\n    \"email\": \"dev@kreativware.co.za\",\r\n    \"addressLine1\": \"6768 Fregatvoel Street\",\r\n    \"addressLine2\": \"Celtisda X20\",\r\n    \"city\": \"Centurion\",\r\n    \"state\": \"Gauteng\",\r\n    \"zip\": \"0157\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost/wisperisp/backend/customer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"wisperisp",
+										"backend",
+										"customer"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 19 Jul 2025 04:31:05 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/8.2.0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Length",
+									"value": "47"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": \"Customer details updated\",\n    \"id\": 102\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Location (Dropdown data filters)",
+			"item": [
+				{
+					"name": "Get States",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"102\",\r\n    \"firstName\": \"Tlhabane\",\r\n    \"lastName\": \"Monareng\",\r\n    \"phone\": \"0730055345\",\r\n    \"email\": \"dev@kreativware.co.za\",\r\n    \"addressLine1\": \"6768 Fregatvoel Street\",\r\n    \"addressLine2\": \"Celtisda X20\",\r\n    \"city\": \"Centurion\",\r\n    \"state\": \"Gauteng\",\r\n    \"zip\": \"0157\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost/wisperisp/backend/location/state",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"wisperisp",
+								"backend",
+								"location",
+								"state"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "[SUCCESS] Get all states",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"102\",\r\n    \"firstName\": \"Tlhabane\",\r\n    \"lastName\": \"Monareng\",\r\n    \"phone\": \"0730055345\",\r\n    \"email\": \"dev@kreativware.co.za\",\r\n    \"addressLine1\": \"6768 Fregatvoel Street\",\r\n    \"addressLine2\": \"Celtisda X20\",\r\n    \"city\": \"Centurion\",\r\n    \"state\": \"Gauteng\",\r\n    \"zip\": \"0157\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost/wisperisp/backend/location/state",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"wisperisp",
+										"backend",
+										"location",
+										"state"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 19 Jul 2025 04:33:46 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/8.2.0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Length",
+									"value": "300"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"records\": [\n        \"Colorado\",\n        \"Delaware\",\n        \"Gauteng\",\n        \"Illinois\",\n        \"Kansas\",\n        \"Louisiana\",\n        \"Maine\",\n        \"Massachusetts\",\n        \"Michigan\",\n        \"Minnesota\",\n        \"Missouri\",\n        \"Montana\",\n        \"Nebraska\",\n        \"New Jersey\",\n        \"New York\",\n        \"North Dakota\",\n        \"Ohio\",\n        \"Oregon\",\n        \"Rhode Island\",\n        \"South Dakota\",\n        \"Tennessee\",\n        \"Texas\",\n        \"Washington\",\n        \"West Virginia\",\n        \"Wyoming\"\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Cities",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"102\",\r\n    \"firstName\": \"Tlhabane\",\r\n    \"lastName\": \"Monareng\",\r\n    \"phone\": \"0730055345\",\r\n    \"email\": \"dev@kreativware.co.za\",\r\n    \"addressLine1\": \"6768 Fregatvoel Street\",\r\n    \"addressLine2\": \"Celtisda X20\",\r\n    \"city\": \"Centurion\",\r\n    \"state\": \"Gauteng\",\r\n    \"zip\": \"0157\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost/wisperisp/backend/location/city?state=New York",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"wisperisp",
+								"backend",
+								"location",
+								"city"
+							],
+							"query": [
+								{
+									"key": "state",
+									"value": "New York"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Cities",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"102\",\r\n    \"firstName\": \"Tlhabane\",\r\n    \"lastName\": \"Monareng\",\r\n    \"phone\": \"0730055345\",\r\n    \"email\": \"dev@kreativware.co.za\",\r\n    \"addressLine1\": \"6768 Fregatvoel Street\",\r\n    \"addressLine2\": \"Celtisda X20\",\r\n    \"city\": \"Centurion\",\r\n    \"state\": \"Gauteng\",\r\n    \"zip\": \"0157\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost/wisperisp/backend/location/city",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"wisperisp",
+										"backend",
+										"location",
+										"city"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 19 Jul 2025 04:36:37 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/8.2.0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Length",
+									"value": "729"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"records\": [\n        \"Amarillo\",\n        \"Bellevue\",\n        \"Berna\",\n        \"Bridgeport\",\n        \"Bucharest\",\n        \"Centurion\",\n        \"Chicago\",\n        \"Colorado Springs\",\n        \"Dallas\",\n        \"Denver\",\n        \"Detroit\",\n        \"El Paso\",\n        \"Escondido\",\n        \"Fayetteville\",\n        \"Fremont\",\n        \"Garland\",\n        \"Glendale\",\n        \"Hayward\",\n        \"Henderson\",\n        \"Honolulu\",\n        \"Huntsville\",\n        \"Indianapolis\",\n        \"Innsbruck\",\n        \"Irving\",\n        \"Lakewood\",\n        \"Laredo\",\n        \"Las Vegas\",\n        \"Lincoln\",\n        \"Lisbon\",\n        \"London\",\n        \"Long Beach\",\n        \"Los Angeles\",\n        \"Louisville\",\n        \"Lyon\",\n        \"Madison\",\n        \"Memphis\",\n        \"Miami\",\n        \"Moreno Valley\",\n        \"New York\",\n        \"Norfolk\",\n        \"Oakland\",\n        \"Omaha\",\n        \"Orlando\",\n        \"Otawa\",\n        \"Paris\",\n        \"Philadelphia\",\n        \"Phoenix\",\n        \"Pittsburgh\",\n        \"Prague\",\n        \"Richmond\",\n        \"Rochester\",\n        \"Rome\",\n        \"Sacramento\",\n        \"Saint Paul\",\n        \"Salem\",\n        \"San Francisco\",\n        \"Scottsdale\",\n        \"Seattle\",\n        \"Springfield\",\n        \"Stockton\",\n        \"Valetta\",\n        \"Venice\",\n        \"Washington\",\n        \"Wien\",\n        \"Worcester\"\n    ]\n}"
+						},
+						{
+							"name": "[SUCCESS] Get Cities by State",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"102\",\r\n    \"firstName\": \"Tlhabane\",\r\n    \"lastName\": \"Monareng\",\r\n    \"phone\": \"0730055345\",\r\n    \"email\": \"dev@kreativware.co.za\",\r\n    \"addressLine1\": \"6768 Fregatvoel Street\",\r\n    \"addressLine2\": \"Celtisda X20\",\r\n    \"city\": \"Centurion\",\r\n    \"state\": \"Gauteng\",\r\n    \"zip\": \"0157\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost/wisperisp/backend/location/city?state=New York",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"wisperisp",
+										"backend",
+										"location",
+										"city"
+									],
+									"query": [
+										{
+											"key": "state",
+											"value": "New York"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 19 Jul 2025 04:41:40 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.54 (Win64) OpenSSL/1.1.1p PHP/8.2.0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Length",
+									"value": "43"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"records\": [\n        \"Laredo\",\n        \"Paris\",\n        \"Scottsdale\"\n    ]\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
